@@ -183,7 +183,7 @@ class Utils
     }
 
     //计算两个日期相隔多少个月
-    public function diffMonth($date1, $date2)
+    public function diff_month($date1, $date2)
     {
         if (strtotime($date1) > strtotime($date2)) {
             $tmp = $date2;
@@ -204,7 +204,7 @@ class Utils
      * param string $date2[格式如：2012-12-01]
      * return array array('年','月','日');   array('year','..','..');
      */
-    public function diffDate($date1, $date2)
+    public function diff_date($date1, $date2)
     {
         if (strtotime($date1) > strtotime($date2)) {
             $tmp = $date2;
@@ -232,7 +232,7 @@ class Utils
      * @param $date2 [格式如：2012-12-01]
      * @return array
      */
-    public function diffDate_list($date1, $date2)
+    public function diff_date_list($date1, $date2)
     {
         if (strtotime($date1) > strtotime($date2)) {
             $ymd = $date2;
@@ -285,7 +285,7 @@ class Utils
      * @param $end_time
      * @return array
      */
-    public function diffDay_list($start_time, $end_time)
+    public function diff_day_list($start_time, $end_time)
     {
         $start = strtotime(date('Ymd', $start_time));
         $end = strtotime(date('Ymd', $end_time));
@@ -310,7 +310,7 @@ class Utils
     public function calculate_age_from_identity_card($identityCard, $date)
     {
         $birthday = $this->get_birthday_from_identity_card($identityCard);
-        $result = $this->diffDate($birthday, $date);
+        $result = $this->diff_date($birthday, $date);
         return $result['year'];
     }
 
@@ -475,7 +475,7 @@ class Utils
      * @param int $timeout 链接超时秒数
      * @return mixed 一般返回String 超时返回False
      */
-    public function httpRequest($url, array $postData = [], $timeout = 10)
+    public function http_request($url, array $postData = [], $timeout = 10)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36");
@@ -688,7 +688,7 @@ class Utils
      * @param $xml_data  xml数据
      * @param $node  节点名称
      */
-    public function getDateForXML($xml_data, $node)
+    public function get_data_for_xml($xml_data, $node)
     {
         $xml_data = $this->filter_unicode($xml_data);
         if ($this->is_xml($xml_data)) {
@@ -1107,7 +1107,7 @@ class Utils
      * @param null $default
      * @return array
      */
-    public function batchAssignData(array $keyArr, $default = null)
+    public function batch_assign_data(array $keyArr, $default = null)
     {
         $result = [];
         foreach ($keyArr as $keyName) {
