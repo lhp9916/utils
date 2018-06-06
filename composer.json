@@ -1,0 +1,18 @@
+{
+  "name": "lhp9916/utils",
+  "description": "utils by lhp9916",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lhp9916",
+      "email": "lhp9916@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lhp9916\\Utils\\": "src/"
+    }
+  },
+  "require": {}
+}
