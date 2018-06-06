@@ -14,5 +14,6 @@
       "Lhp9916\\Utils\\": "src/"
     }
   },
-  "require": {}
+  "require": {},
+  "minimum-stability": "dev"
 }
